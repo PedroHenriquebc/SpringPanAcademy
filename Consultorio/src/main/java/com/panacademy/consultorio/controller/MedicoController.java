@@ -1,4 +1,4 @@
-package com.panacademy.desafio2.controller;
+package com.panacademy.consultorio.controller;
 
 import java.net.URI;
 import java.util.List;
@@ -13,8 +13,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
-import com.panacademy.desafio2.model.Medico;
-import com.panacademy.desafio2.serviceImpl.MedicoServiceImpl;
+import com.panacademy.consultorio.model.Medico;
+import com.panacademy.consultorio.serviceImpl.MedicoServiceImpl;
 
 @RestController
 @RequestMapping(path = "/medicos")

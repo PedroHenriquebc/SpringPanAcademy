@@ -1,13 +1,13 @@
-package com.panacademy.desafio2.serviceImpl;
+package com.panacademy.consultorio.serviceImpl;
 
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.panacademy.desafio2.model.Medico;
-import com.panacademy.desafio2.repository.MedicoRepository;
-import com.panacademy.desafio2.service.MedicoService;
+import com.panacademy.consultorio.model.Medico;
+import com.panacademy.consultorio.repository.MedicoRepository;
+import com.panacademy.consultorio.service.MedicoService;
 
 @Service
 public class MedicoServiceImpl implements MedicoService{

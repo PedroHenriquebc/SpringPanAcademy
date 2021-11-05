@@ -1,4 +1,4 @@
-package com.panacademy.desafio2.model;
+package com.panacademy.consultorio.model;
 
 import java.util.Objects;
 

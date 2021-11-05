@@ -1,13 +1,13 @@
-package com.panacademy.desafio2;
+package com.panacademy.consultorio;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class Desafio2Application {
+public class ConsultorioApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(Desafio2Application.class, args);
+		SpringApplication.run(ConsultorioApplication.class, args);
 	}
 
 }

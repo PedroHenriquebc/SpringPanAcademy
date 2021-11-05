@@ -1,8 +1,8 @@
-package com.panacademy.desafio2.service;
+package com.panacademy.consultorio.service;
 
 import java.util.List;
 
-import com.panacademy.desafio2.model.Medico;
+import com.panacademy.consultorio.model.Medico;
 
 public interface MedicoService {
 	

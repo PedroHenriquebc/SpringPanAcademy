@@ -1,14 +1,15 @@
-package com.panacademy.desafio2.serviceImpl;
+package com.panacademy.consultorio.serviceImpl;
 
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.panacademy.desafio2.model.Consulta;
-import com.panacademy.desafio2.repository.ConsultaRepository;
-import com.panacademy.desafio2.repository.MedicoRepository;
-import com.panacademy.desafio2.service.ConsultaService;
+import com.panacademy.consultorio.model.Consulta;
+import com.panacademy.consultorio.model.Medico;
+import com.panacademy.consultorio.repository.ConsultaRepository;
+import com.panacademy.consultorio.repository.MedicoRepository;
+import com.panacademy.consultorio.service.ConsultaService;
 
 @Service
 public class ConsultaServiceImpl implements ConsultaService {
@@ -32,10 +33,26 @@ public class ConsultaServiceImpl implements ConsultaService {
 
 	@Override
 	public Consulta criar(Consulta consulta) {
-		 this.medicoRepository
+		 Medico med = this.medicoRepository
 				.findById(consulta.getMedico().getId())
 				.orElseThrow(() -> new IllegalArgumentException("Médico inexistente"));
+		consulta.setMedico(med);
 		return this.consultaRepository.save(consulta);
+	}
+
+	@Override
+	public Consulta reagendar(String id, Consulta consulta) {
+		Consulta novaConsulta = obterPorId(id);
+		novaConsulta.setData(consulta.getData());
+		return this.consultaRepository.save(novaConsulta);
+	}
+
+	@Override
+	public Consulta deletar(String id) {
+		Consulta retorno = obterPorId(id);
+		this.consultaRepository.deleteById(id);
+		return retorno;
+		
 	}
 
 }
